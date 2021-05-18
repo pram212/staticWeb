@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// jika routenya / dan metodenya get, maka tangani dengan controller 'HomeController' dengan metode show
+Route::get('/', 'HomeController@show');
+
+// jika routenya /register dan metodenya get, maka tangani dengan controller'AuthController' dengan metode index 
+Route::get('/register', 'AuthController@index');
+
+// jika routenya /welcome dan metodenya 'post', maka tangani dengan controller 'AuthController' dengan metode create
+Route::post('/welcome', 'AuthController@create');
