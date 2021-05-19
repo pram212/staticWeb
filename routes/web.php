@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// TUGAS PEKAN 3 HARI KE 2 - INSTALASI LARAVEL
 
 // jika routenya / dan metodenya get, maka tangani dengan controller 'HomeController' dengan metode show
 Route::get('/', 'HomeController@show');
@@ -19,3 +20,13 @@ Route::get('/register', 'AuthController@index');
 
 // jika routenya /welcome dan metodenya 'post', maka tangani dengan controller 'AuthController' dengan metode create
 Route::post('/welcome', 'AuthController@create');
+
+// TUGAS PEKAN 3 HARI KE 3 - TEMPLATING BLADE
+
+Route::get('/tables', function(){
+	return view('tables');
+});
+
+Route::get('/datatables', function(){
+	return view('dataTables');
+});
