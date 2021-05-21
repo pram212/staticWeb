@@ -13,7 +13,7 @@ class AuthController extends Controller
      */
     public function index()
     {
-        return view('register');
+        return view('week3day2.register');
     }
 
     /**
@@ -32,7 +32,7 @@ class AuthController extends Controller
         $lastname = $request["lastname"];
 
         // redirect ke halaman congrat dengan mengirimkan parameter berupa data inputan dari form
-        return view('congrat', ['firstname' => $firstname, 'lastname' => $lastname]);
+        return view('week3day2.congrat', ['firstname' => $firstname, 'lastname' => $lastname]);
 
     }
 

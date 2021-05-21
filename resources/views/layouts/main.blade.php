@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('component.head')
+@include('layouts.head')
 
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -18,7 +18,7 @@
   <!-- /.navbar -->
 
   <!-- Sidebar -->
-  @include('component.sidebar')
+  @include('layouts.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -29,6 +29,9 @@
           <div class="col-sm-6">
             <h1>@yield('headercontent')</h1>
           </div>
+          <div class="col-sm-6">
+            @yield('notify')
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -38,18 +41,6 @@
 
       <!-- Default box -->
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">@yield('cardTitle')</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
         <div class="card-body">
           @yield('content')
         </div>
@@ -62,7 +53,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  @include('component.footer')
+  @include('layouts.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

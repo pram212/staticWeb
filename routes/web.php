@@ -22,11 +22,20 @@ Route::get('/register', 'AuthController@index');
 Route::post('/welcome', 'AuthController@create');
 
 // TUGAS PEKAN 3 HARI KE 3 - TEMPLATING BLADE
-
 Route::get('/tables', function(){
-	return view('tables');
+	return view('week3day3and5.tables');
+});
+Route::get('/datatables', function(){
+	return view('week3day3and5.dataTables');
 });
 
-Route::get('/datatables', function(){
-	return view('dataTables');
-});
+ 
+// TUGAS PEKAN 3 HARI KE 5 - CRUD
+Route::get('/cast', 'CastController@index'); // menampilkan list data para pemain film
+Route::get('/cast/create', 'CastController@create'); // menampilkan form untuk menambahkan data 
+Route::post('/cast', 'CastController@store'); //menyimpan data baru ke tabel cast
+Route::get('/cast/{cast_id}', 'CastController@show'); // menampilkan detail
+Route::get('/cast/{cast_id}/edit', 'CastController@edit'); // menampilkan form untuk edit
+Route::put('/cast/{cast_id}', 'CastController@update'); // menyimpan perubahan 
+Route::delete('/cast/{cast_id}', 'CastController@destroy'); // menghapus data
+
